@@ -1,0 +1,66 @@
+package pk;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.Driver;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.servlet.jsp.JspException;
+import javax.servlet.jsp.PageContext;
+import javax.servlet.jsp.tagext.TagSupport;
+
+
+public class oracle  extends TagSupport {
+
+	
+	static Connection con=null;
+	public  static  int  heena(String  user)   throws SQLException
+	{
+	try
+	{
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	System.out.println("class  found");
+	System.out.println("class  found");
+    con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","java");
+	System.out.println("connection  got");
+	java.sql.Statement stmt=con.createStatement();  
+	ResultSet rs=stmt.executeQuery("select * from heena1");  
+	while(rs.next())  
+	{
+	 System.out.println(rs.getInt(1)+"  "+rs.getString(2));  
+    if(user.equals(rs.getString(2)))
+    {
+    	  System.out.println("correct  user");
+     }
+	} 
+	
+	
+//	 PreparedStatement  psmt=con.prepareStatement("insert  into heena1  values(? ?)");
+//	 psmt.setInt(1,1);
+//	 psmt.setString(2, "abc");
+//	  System.out.println("table  craeted  inserted ");
+//	 int  i=psmt.executeUpdate();
+//	 System.out.println("table  crated" + i);
+	  }
+	catch(Exception  e)
+	{
+	e.printStackTrace();
+	}
+	return 0;
+	
+	}
+	
+	@Override
+	public int doEndTag() throws JspException {
+		try {
+			pageContext.getOut().write("correct  username  and  password");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// TODO Auto-generated method stub
+		return super.doEndTag();
+	}
+}

@@ -1,0 +1,19 @@
+import java.io.EOFException;
+
+
+public class SimplePojoModel  
+{
+
+	public  void  heena()
+	{
+	try
+	{
+		
+	}
+	
+	catch(EOFException  e)
+	{
+		
+	}
+	}
+}

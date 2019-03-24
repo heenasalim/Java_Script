@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+
+</head>
+<body>
+<script type="text/javascript">
+<script type="text/javascript">
+
+function check()
+{
+	var user= document.getElementById("user").value;
+	var pswd= document.getElementById("pass").value;
+	
+	if(user == "" || pswd=="")
+		{
+		alert("Enter Both Fields");
+		return false;
+		}
+	
+  	else if(pswd !="" && user !="")
+   		{
+   			var matcher=/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-z0-9!@#$%^&*]{7,14}$/; 		
+   			if(!(pswd.match(matcher))){
+    				alert("Password Must Be 8 Characters Long and Must Contain 1 Special Character (!,#,$,^,&)");
+
+    				return false;
+   			}
+			
+   		}
+	
+}
+
+function nullCheck()
+{
+	}
+
+
+
+
+</script>
+
+
+</script>
+<form >
+<p  style="font-family:times new roman;color:yellow;font-size:20;background-color:blue;">
+
+ <br/>
+ &nbsp; <font  face="arial"><big>facebook  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</big></font>
+  
+Enter  the username<input type="text"  name=user value=username  >
+ 
+Enter  the  password <input  type="password"  id="pass"   value="password" >
+<input type="submit" value="Submit" onclick="return check();">
+<!-- Login<input  type="submit"  name="submit" onclick="return check();" value="sumbitbutton"> -->
+
+</p>
+
+</form>
+</body>
+</html>

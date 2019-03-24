@@ -1,0 +1,11 @@
+import java.io.EOFException;
+
+
+public class SimplePojoModel  
+{
+
+	public  void  heena() throws EOFException
+	{
+		System.out.println("heena  got  job  in  tech  mahindra");
+	}
+}

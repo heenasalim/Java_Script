@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function  check()
+{
+var  sear1=	document.getElementById("searchbox").value;
+var  matcher=/^(?=.*[fF])(?=.*[l])(?=.*[i])(?=.*[p])(?=.*[p])(?=.*[c])(?=.*[a])(?=.*[r])(?=.*[t])(?=.*[.com])[a-zA-Z.]{1,14}$/;
+alert("you  have  entered sear1 ///////" + sear1);
+if(sear1.match("facebook"))
+	{
+	alert("Logiing to  facebbok Welcome user ");
+	document.write(	"<a href=FACEBOOKGUI.html>Welcome  to  facebook</a>");
+     
+	}
+ if(sear1.match("gmail"))
+		{
+		alert("correct  spelling")
+		alert("you  are  login  to  gmail")
+		document.write("<a href=gmail.html>gmail  services</a>")
+		}
+ if(sear1.match(matcher))
+		 {
+	   document.write("<a href=Flipcart.html>Flipcart  services</a>")
+		 }
+ 
+
+	}
+</script>
+</head>
+<body>
+<h1 style="font-family:timesnewroman; font-size:54px;  color:blue"> web  browser  is  created  by  heena</h1>
+<img alt="internet" src="C:\Users\Lenovo\Downloads\wffwffwfw.jpg"  height="100"  width="100">
+
+<center><h1>GOOGLE  EVERYWHERE</h1></center>
+<a href=FACEBOOKGUI.html>Welcome  to  facebook</a>
+<center><h2><img alt="GOOGLE  SEARCH" src="C:\Users\Lenovo\Downloads\shsh.jpg"></h2></center>
+<form  action=GoogleLinksPage.html >
+<center><input type="text"  id="searchbox" value="seearch required feilds" width="50"  height="70"/></center>
+<center><input  type="submit"  id="sear"  value="search" onclick="check()"></center>
+<a href=gmail.html>gmail  services</a>
+<br/>
+<br/>
+<br/>
+</form>
+</body>
+</html>

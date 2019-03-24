@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+document.write("password  provided  is");
+//alert("you  have   successfully  login");
+function promtusertoadd8bitpassword
+{
+	alert("heena  shaikh");
+	 var   passc=  document.getElementById("pass").value;
+	 document.write("password  provided  is"+passc+"}");
+	}
+</script>
+
+</head>
+<body>
+<form   action="home.html">
+<p  style="font-family:times new roman;color:yellow;font-size:20;background-color:blue;">
+
+ <br/>
+ &nbsp; <font  face="arial"><big>facebook  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</big></font>
+  
+Enter  the username<input type="text"  name=user value=username  >
+ 
+Enter  the  password <input  type="password"  id="pass"   value="password" >
+Login<input  type="submit"  name="submit" onclick="promtusertoadd8bitpassword" value="sumbitbutton">
+
+</p>
+
+</form>
+</body>
+</html>

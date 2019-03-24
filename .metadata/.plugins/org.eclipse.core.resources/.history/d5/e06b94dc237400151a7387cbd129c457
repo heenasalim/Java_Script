@@ -1,0 +1,10 @@
+package pk;
+
+public class expressionlanguage {
+	
+	public  static  int lengthUser(String  x)
+	{
+		return x.length();
+	}
+
+}

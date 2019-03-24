@@ -1,0 +1,10 @@
+import java.io.EOFException;
+
+
+public class SimplePojoModel  
+{
+
+	public  void  heena() throws EOFException
+	{
+	}
+}

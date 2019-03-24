@@ -1,0 +1,15 @@
+import java.io.EOFException;
+
+
+public class SimplePojoModel {
+
+	try
+	{
+		
+	}
+	
+	catch(EOFException  e)
+	{
+		
+	}
+}

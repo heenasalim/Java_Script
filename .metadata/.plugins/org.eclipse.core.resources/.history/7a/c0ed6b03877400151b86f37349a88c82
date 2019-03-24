@@ -1,0 +1,19 @@
+package pk;
+
+import javax.servlet.jsp.PageContext;
+
+public class expressionlanguage {
+	
+	public  static  int  lengthUser(String  x)
+	{
+		
+	
+		return  x.length();
+	}
+
+	
+	public   static  int ageAfter1year(String age)
+	{
+		
+	}
+}

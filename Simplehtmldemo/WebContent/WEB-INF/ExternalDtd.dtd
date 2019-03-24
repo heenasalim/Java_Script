@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT Vehicle ((bike,car)+)>
+<!ELEMENT  bike (pept,activa,motor)>
+<!ELEMENT car (Karisma,brut,Mahindra)>
+<!ELEMENT pept (#PCDATA)>
+<!ELEMENT activa (#PCDATA)>
+<!ELEMENT pept (#PCDATA)>
+<!ELEMENT motor (#PCDATA)>
+<!ELEMENT Karisma (#PCDATA)>
+<!ELEMENT brut (#PCDATA)>
+<!ELEMENT Mahindra (#PCDATA)>
+
+

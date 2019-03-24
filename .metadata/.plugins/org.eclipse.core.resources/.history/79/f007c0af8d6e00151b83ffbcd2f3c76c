@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function check()
+{
+confirm(" do  u  really  want  to  login");
+var  user1=document.getElementById("user").value;
+var  userc="h";
+
+var  pass1=document.getElementById("pass").value;
+passc=pass1.length;
+
+var  num=8;
+alert(passc);
+if(user1=="" ||  pass1=="")
+	{
+	alert("username  or  password  cannot   be  blank");
+	
+	}
+else if(user1.match(userc) &&  passc > 8  && pass1=="heenashaikh")
+	{
+	alert("correct   password");
+	alert("length  is  11  bit");	
+	document.write("<strong>  length is </strong> "+ pass1);
+	alert("heena  shaikh");
+	check5();
+	}
+else
+{
+	alert("Wrong  password");
+	alert("wrong  username"); 
+	var  user1=check2();
+	var  pass1=check2();
+	check1();
+   
+	}
+	
+	}
+	function  check2()
+	{
+		prompt("enter  the  correct  username");
+
+	}
+	function  check3()
+	{
+	  var  date1=new  Date();
+	  var  datec=date1.getHours();
+		  if(datec  <12  )
+			  {
+			    confirm("This  is  afternoon  really  you  want  to  go  ahead");
+			  }
+		  if(datec  <  5)
+			  {
+			  alert("This  is  good  evening");
+			  }
+			  if(datec<24)
+				  {
+		        prompt("how  much  time  i  want  to  login   ")
+				  }
+	}
+	function  check4()
+	{
+		
+	var  fact1=prompt("enter  the  number  of  which  u want  to  find  factorial");
+		  if(fact1==0)
+			{
+			document.write("factorial  is" + "1");
+			}
+		  else 	
+			{
+		   
+		   document.write("factorial is " + fact1);
+			}
+	}
+	function  check5()
+	{
+		var  pass2=document.getElementById("pass").value;
+		
+		var  matcher=/^(?=.*[0-9])(?=.*[&^%$#@!*])[a-zA-Z0-9@#%^&*]{7,14}$/;
+		
+		if(pass2.match(matcher))
+			{
+			alert("password   is  absolutely  correct  go  ahead");
+			
+			}
+		else
+			{
+			alert("password  is  wrong");
+			}
+	
+	}
+</script>
+</head>
+<body>
+username<input  type="text"  id="user"  >
+password<input  type="password"   id="pass"> 
+<input  type ="submit"  onclick="check()"  onselect="" name="sub" value="Login"    >
+<input  type ="submit"  onclick="check2()" name="sub" value="prompt"   >
+<input  type ="submit"  onclick="check3()" name="sub" value="day "   >
+<input  type ="submit"  onclick="check4()" name="sub" value=" factorial"  >
+<input  type ="submit"  onclick="check5()" name="sub" value="password"   >
+</body>
+</html>

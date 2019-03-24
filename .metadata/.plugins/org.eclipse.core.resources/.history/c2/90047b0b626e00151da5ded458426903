@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function check()
+{
+var  user1=document.getElementById("user").value;
+var  userc="h";
+
+var   pass1=document.getElementsByName("pass").value;
+//var  passc=pass1.length;
+var  num=8;
+//alert(passc);
+if(user1=="   "| | pass1=="  ")
+	{
+	alert("username  or  password  cannot   be  blank");
+	}
+else  if(user1!="   "  && pass1=="  ")
+	{
+	  if(user1.match(userc))
+	  {
+	alert("correct   password");
+	alert("length  is  8  bit")	
+	alert("heena  shaikh");
+	   }
+    
+	
+	}
+}
+	
+</script>
+</head>
+<body>
+username<input  type="text"  id="user"  >
+password<input  type="password"   name="pass"> 
+<input  type ="submit"  onclick="check()" name="sub" value="Login"    >
+</body>
+</html>

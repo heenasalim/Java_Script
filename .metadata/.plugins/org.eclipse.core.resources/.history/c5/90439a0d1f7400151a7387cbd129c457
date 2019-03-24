@@ -1,0 +1,31 @@
+package pk;
+
+import java.util.Date;
+
+import javax.servlet.jsp.JspException;
+import javax.servlet.jsp.tagext.TagSupport;
+
+public class demotaglib extends TagSupport {
+	
+	@Override
+	public int doStartTag() throws JspException {
+		// TODO Auto-generated method stub
+		return super.doStartTag();
+	
+		
+		
+		
+	}
+@Override
+public int doEndTag() throws JspException {
+	// TODO Auto-generated method stub
+	Date  d=new Date();
+	pageContext.getOut().write("hello   todays  date :")
+	
+return EVAL_PAGE;	
+	
+
+	
+	
+}
+}

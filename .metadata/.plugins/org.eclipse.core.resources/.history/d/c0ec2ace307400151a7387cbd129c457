@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib>
+<tlib-version>1.0</tlib-version>
+<function>
+<name>lengthUser</name>
+<function-class>pk.expressionlanguage</function-class>
+<function-signature>java.lang.string  lengthUser(java.lang.string)</function-signature>
+</function>
+</taglib>

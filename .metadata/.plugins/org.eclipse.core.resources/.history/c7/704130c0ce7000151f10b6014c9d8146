@@ -1,0 +1,13 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<H1>INBOX</H1>
+<input type="submit"  value="message  from  client/user1  who is  admin  user">
+<input type="submit"  value="message  from  client/user3  who is  simple user">
+<input type="submit"  value="message  from  client/user4 who is  simple user">
+</body>
+</html>

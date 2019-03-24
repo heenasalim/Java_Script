@@ -1,0 +1,10 @@
+package ELDemo;
+
+public class ELDemoJava {
+
+	
+	public  static  int  method()
+	{
+		 return "heenashaikh";
+	}
+}

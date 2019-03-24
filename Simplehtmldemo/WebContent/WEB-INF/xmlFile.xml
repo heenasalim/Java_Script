@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Vehicle SYSTEM  "ExternalDtd.dtd" >
+<Vehicle>
+<bike>
+<pept> This  is  scooty  pept</pept>
+<activa> This  is  activa </activa>
+<motor>This  is  motor </motor>
+</bike>
+<car>
+<Karisma>Karisma</Karisma>
+<brut>brut</brut>
+<Mahindra>Mahindra</Mahindra>
+</car>
+
+
+</Vehicle>
+<!--!DOCTYPE Vehicle PUBLIC "\\C:\\Users\\Lenovo\\Desktop\\JAVASCRIPT\\Simplehtmldemo\\WebContents\\ExternalDtdforxmlFile.dtd" "ExternalDtdforxmlFile.dtd"-->

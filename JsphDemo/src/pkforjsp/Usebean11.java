@@ -1,0 +1,24 @@
+package pkforjsp;
+
+public class Usebean11 {
+
+	String  user,age;
+	public String getUser() {
+		return user;
+	}
+
+	public void setUser(String user) {
+		this.user = user;
+	}
+
+
+	public String getAge() {
+		return age;
+	}
+
+	public void setAge(String age) {
+		this.age = age;
+	}
+	
+	
+}

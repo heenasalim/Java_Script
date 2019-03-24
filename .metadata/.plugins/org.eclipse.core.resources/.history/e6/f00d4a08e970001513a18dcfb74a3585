@@ -1,0 +1,81 @@
+package fbappservlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import javax.servlet.ServletException;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class Message2Servlet
+ */
+public class Message2Servlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public Message2Servlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		
+		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","java");
+		System.out.println("got  driver  for  message  2");
+		System.out.println("got  connection  for  message 2");
+		  Statement  smt1=con.createStatement();
+		  String   fname=request.getParameter("heena");
+	      String  mesg=request.getParameter("mesg");
+			 System.out.println("  selected  value is " + fname );
+			// System.out.println("  selected  value is " +   mesg );
+   	   ResultSet   rs2=smt1.executeQuery("select  *  from  message1");
+        	   while(rs2.next())
+   	     {
+   		     if(fname.equals(rs2.getString(1)))
+   		     {
+   	      	System.out.println("special messages  for  u  are");
+   	     	System.out.println(rs2.getString(2));
+   	  	     mesg=rs2.getString(2);	
+   	  	     PrintWriter  out=response.getWriter();
+   	     	System.out.println("your  message  shoild  display  in  textara");
+   	     out.println("<FORM METHOD=POST ACTION='analyzeDocBase'>");
+   	  out.println("<input type='text'name='owner'value="+ mesg +">");
+   	  System.out.println("The value of the entered field is" + mesg);
+   	  out.println("</form>");
+   				
+   	        	}   
+   	    }
+   	 	 
+	}
+		catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}

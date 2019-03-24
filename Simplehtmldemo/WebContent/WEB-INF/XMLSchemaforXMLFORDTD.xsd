@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/XMLSchemaforXMLFORDTD" xmlns:tns="http://www.example.org/XMLSchemaforXMLFORDTD" elementFormDefault="qualified">
+
+<element name="bank"    type="chinchwad"></element>
+<element name="account">
+<complexType>
+<sequence>
+<element name="accno" type="string"></element>
+<element  name="branchname"   type="string"></element>
+</sequence>
+</complexType>
+</element>
+
+<element  name="customer">
+<complexType>
+<sequence>
+<element  name="customername"  type="date"></element>
+<element  name="customeraddreass"  type="string"></element>
+</sequence>
+</complexType>
+</element>
+
+
+<complexType  name="chinchwad">
+<sequence>
+<element  ref="account"></element>
+<element   ref="customer"></element>
+</sequence>
+</complexType>
+
+</schema>

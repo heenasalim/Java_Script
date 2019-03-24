@@ -1,0 +1,8 @@
+<taglib>
+<tlib-version>1.0</tlib-version>
+<jsp-version>2.0</jsp-version>
+<tag><!--  -->
+<name>abc</name>
+<tag-class>pk.demotaglib</tag-class>
+</tag>
+</taglib>

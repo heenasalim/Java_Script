@@ -1,0 +1,31 @@
+<!--
+    This is the HTML 4.01 Transitional DTD, which includes
+    presentation attributes and elements that W3C expects to phase out
+    as support for style sheets matures. Authors should use the Strict
+    DTD when possible, but may use the Transitional DTD when support
+    for presentation attribute and elements is required.
+
+    HTML 4 includes mechanisms for style sheets, scripting,
+    embedding objects, improved support for right to left and mixed
+    direction text, and enhancements to forms for improved
+    accessibility for people with disabilities.
+
+          Draft: $Date: 1999/12/24 23:37:48 $
+
+          Authors:
+              Dave Raggett <dsr@w3.org>
+              Arnaud Le Hors <lehors@w3.org>
+              Ian Jacobs <ij@w3.org>
+
+    Further information about HTML 4.01 is available at:
+
+        http://www.w3.org/TR/1999/REC-html401-19991224
+
+
+    The HTML 4.01 specification includes additional
+    syntactic constraints that cannot be expressed within
+    the DTDs.
+
+-->
+<!ENTITY % HTML.Version "-//W3C//DTD HTML 4.01 Transitional//EN"
+  --

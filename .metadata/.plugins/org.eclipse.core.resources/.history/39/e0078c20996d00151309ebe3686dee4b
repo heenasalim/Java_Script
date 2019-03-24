@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>  SIMPLE    USES   OF  TAGS </title>
+</head>
+<body>
+<p  style="font-family:times new roman;color:green;font-size: 30ss;background-color:yellow;background-image:D//i">it  is  providing  paragraph  to  mytext
+heena  salim  shaikh   is  <big>java  software  developer</big>    always  <small> ceates </small> new  web  application  soon  launch  new live  threading  apllivation
+ i  have <b> karisma  car   and </b><sub>and  and </sub><strong> i  am  happiest  person  in  the  world</strong></p>
+ 
+<center> <h1> This  is  the  first  heading </h1></center>s
+ <h2> this is  second <br> and  lest  imp  heading </h2>
+ <h5>  this   is  fifth  heading </h5>
+ <h3>  this  is  <b>the  thrd </b>  <sub> and  laest  least</sub> <br/> imp<sup>  heading </sup></h3>
+ <hr/>
+ heena  salim  shaikh  is  the  first   java  <center>developer</center> <hr/> <em>which  is </em>   worldwide  <i>faoumous</i>
+</body>
+</html>

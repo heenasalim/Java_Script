@@ -1,0 +1,16 @@
+package pkforjsp;
+
+public class Usebean11 {
+
+	public String getUser() {
+		return user;
+	}
+
+	public void setUser(String user) {
+		this.user = user;
+	}
+
+	String  user;
+	
+	
+}

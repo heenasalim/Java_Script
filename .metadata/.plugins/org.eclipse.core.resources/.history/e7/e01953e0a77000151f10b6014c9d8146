@@ -1,0 +1,166 @@
+package fbappservlet;
+
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Enumeration;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.tomcat.dbcp.pool.impl.GenericKeyedObjectPool.Config;
+
+/**
+ * Servlet implementation class LoginServlet
+ */
+public class LoginServlet extends HttpServlet implements  ServletContextListener{
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public LoginServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see Servlet#init(ServletConfig)
+	 */
+	public void init(ServletConfig config) throws ServletException {
+		super.init(config);
+	//	String  driver=config.getServletContext().getInitParameter("driver");
+
+	//	String   con1=config.getServletContext().getInitParameter("connectionstring");
+		// TODO Auto-generated method stub
+//		try {
+//			Class.forName(driver);
+//			System.out.println("driver   found  and  it  is" + driver);
+//		//	Connection  con=DriverManager.getConnection(con1,"system","java");
+//			System.out.println("got   connection" + con1);
+//			
+//		} catch (ClassNotFoundException | SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		
+	}
+
+	/**
+	 * @see Servlet#getServletConfig()
+	 */
+	public ServletConfig getServletConfig() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/**
+	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doPost(request,response);
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		 PrintWriter   out=response.getWriter();
+
+//		out.println("<html>");
+//		out.println("<body>");
+//		out.println("<h1><strong>heena  salim  shaikh  u  suceed</strong></h1>");
+//		out.println("<h1> u  login  to  login  servelet  for   validating   username  and  password  </h1>");
+//		out.println("</body>");
+//		out.println("</html>");
+//		System.out.println("****************");
+//		
+		try
+		{
+	 System.out.println("connection  establishment");
+	 Class.forName("oracle.jdbc.driver.OracleDriver");
+	System.out.println("class  found");
+	Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","java");
+	System.out.println("got  driver");
+	System.out.println("got  connection");
+//	 ServletContext  cont=getServletContext();
+//	 String  classd=cont.getInitParameter("driver");
+//	System.out.println("classd  is"  +  classd);
+//	 String  conc=cont.getInitParameter("connectionstring");
+//	System.out.println("conc  is" + conc);
+//	 Class.forName(classd);
+//	 System.out.println("class  found");
+//	 Connection  con=DriverManager.getConnection(conc,"system","pass");
+//	 System.out.println("got  connection");
+		Statement  smt=con.createStatement();
+		 ResultSet  rs=smt.executeQuery("select  *  from  login");
+		 while(rs.next())
+		 {
+			//System.out.println("correct  usrname  is" + rs.getString(1));
+			//System.out.println("correct  usrname  is" + rs.getString(2));
+		 
+	//	Enumeration user_attributes=request.getAttributeNames();
+		//System.out.println("user_attributes  is" + user_attributes);
+		String user=request.getParameter("user");
+		 String  pass=request.getParameter("pass");
+		 System.out.println("user" +  user);
+		 System.out.println("pass"  +  pass);
+		 if(user.equals(rs.getString(1))  &&   pass.equals(rs.getString(2)) )
+		 {
+	    System.out.println("correct  username  and  password");
+		response.sendRedirect("home.html");
+		
+		 }
+		else
+		  {
+		 System.out.println("wrong  username  and  password");
+		 response.sendRedirect()
+		   }  
+		 }
+	}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			
+		out.close();
+		//con.close();
+		}
+	}
+
+	@Override
+	public void contextDestroyed(ServletContextEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void contextInitialized(ServletContextEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<H1>INBOX  of  user2</H1>
+<h1>message  from  admin</h1>
+<a href="heena  shaikh">heena  shaikh  messages</a>
+<input type="text"  value="message  from  client/user1  who is  admin  user">
+<br/>
+<br/>
+<br/>
+<hr/>
+<h1>message  from user 3</h1>
+<input type="submit"  value="message  from  client/user3  who is  simple user">
+<br/><br/><br/>
+<hr/>
+<h1>message  from  user4</h1>
+<input type="submit"  value="message  from  client/user4 who is  simple user">
+</body>
+</html>

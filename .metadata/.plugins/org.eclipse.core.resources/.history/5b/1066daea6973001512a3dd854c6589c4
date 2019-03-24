@@ -1,0 +1,51 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1> Good  morning</h1>
+<%! int  i=0;int  z; %>
+<table  border="2" align="center" bgcolor="orange"  >
+
+<%
+for(i=1;i<10;i++)
+{	
+%>
+
+<tr>
+<td>
+<%= z=i*267	%>
+<br/>
+</td>
+</tr>
+
+<% 
+}
+out.print("  z   is" + z);
+out.println("<h1>  how  are  u</h1>");
+%>
+
+</table>
+<h1>  how  are  u</h1>
+<h1>  how  are  u</h1>
+
+ <jsp:include page="HtmlforjapDemo.html"></jsp:include>
+************
+<%--<jsp:include page="Login.jsp"></jsp:include>--> --%>
+****************
+<jsp:useBean id="u" class="pk.SimplePojoModel"  scope="application" >this  is  use  bean</jsp:useBean>
+<jsp:setProperty  name="u"  property="*" />
+<jsp:getProperty  name="u"  property="schoolname" />
+<!--  out.println("schoolname  is" + schoolname);-->
+<h1><% String  t= request.getParameter("schoolname");
+String k=u.getSchoolname();
+out.println("<h1>t" + t + "</h1>");%></h1>
+  
+<h1>above  property</h1>
+
+</body>
+</html>
